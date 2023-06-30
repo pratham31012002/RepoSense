@@ -98,7 +98,7 @@
               span {{ ignoredFilesCount }} ignored file(s)
 
   .files(v-if="isLoaded")
-    .empty(v-if="info.files.length === 0") nothing to see here :(
+    .empty(v-if="selectedFiles.length === 0") nothing to see here :(
     template(v-for="(file, i) in selectedFiles", v-bind:key="file.path")
       .file(v-bind:ref="file.path")
         .title(v-bind:class="{'sticky':\ file.active}")
